@@ -3,14 +3,12 @@ package io.umehara.ohirufinder.restaurant
 import org.springframework.stereotype.Repository
 
 @Repository
-class StubRestaurantRepo: RestaurantRepo {
+class StubRestaurantRepo : RestaurantRepo {
     override fun getAll(): List<Restaurant> {
         return listOf(
-                Restaurant("Restaurant A"),
-                Restaurant("Restaurant B"),
-                Restaurant("Restaurant B"),
-                Restaurant("Restaurant B"),
-                Restaurant("Restaurant C")
+                Restaurant("トラットリアヴィ"),
+                Restaurant("麺処　巌流島"),
+                Restaurant("あさりの食堂")
         )
     }
 }

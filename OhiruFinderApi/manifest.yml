@@ -3,3 +3,4 @@ applications:
   - name: ohiru-finder-api
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+}}'
+      CLIENT_URL: https://ohiru.cfapps.io

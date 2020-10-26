@@ -24,6 +24,7 @@ class RestaurantsControllerTests {
 
         controller.perform(get("/restaurants"))
                 .andExpect(status().isOk)
+                .andExpect(jsonPath("$.length()", equalTo(3)))
                 .andExpect(jsonPath("$[0].name", equalTo("Restaurant A")))
                 .andExpect(jsonPath("$[1].name", equalTo("Restaurant B")))
                 .andExpect(jsonPath("$[2].name", equalTo("Restaurant C")))

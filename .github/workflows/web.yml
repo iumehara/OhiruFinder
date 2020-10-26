@@ -20,9 +20,6 @@ jobs:
     - name: Install dependencies
       run: npm ci
       working-directory: ohiru-finder-web
-    - name: Build
-      run: npm run build --if-present
-      working-directory: ohiru-finder-web
     - name: Run unit tests
       run: npm run test-once
       env:
@@ -51,7 +48,7 @@ jobs:
       run: npm ci
     - name: Build
       working-directory: ohiru-finder-web
-      run: npm run build --if-present
+      run: ./scripts/build-cf.sh
     - name: CF Push
       working-directory: ohiru-finder-web
       run: cf push ohiru-finder

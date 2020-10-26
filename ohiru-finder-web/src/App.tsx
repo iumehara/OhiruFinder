@@ -1,12 +1,17 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
+import NetworkRestaurantRepo from './repo/NetworkRestaurantRepo'
+import RestaurantList from './component/RestaurantList';
 
 function App() {
+  const restaurantRepo = new NetworkRestaurantRepo()
+
   return (
     <div className="App">
-      <h1>Ohiru Finder</h1>
+      <div>Ohiru Finder</div>
+      <RestaurantList restaurantRepo={restaurantRepo}/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
